@@ -11,5 +11,5 @@ aggregatedTotal <- aggregate(Emissions ~ year, NEI, sum)
 
 ##Creating the plot for the aggregatedTotal variable
 png('plot1.png')
-barplot(height=aggregatedTotal$Emissions, names.arg = aggregatedTotal$year, xlab="Years", ylab=expression('total PM'[2.5]*' Emission'), main=expression('Total PM'[2.5]*'Emissions at Random Years'))
+barplot(height=aggregatedTotal$Emissions, names.arg = aggregatedTotal$year, xlab="Years", ylab=expression('total PM'[2.5]*' Emission'), main=expression('Total PM'[2.5]*'Emissions at various years'))
 dev.off()
