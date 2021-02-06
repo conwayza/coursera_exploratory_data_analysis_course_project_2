@@ -2,10 +2,11 @@
 Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
 
 ##Loading the information needed to assign a subset and a variable as well as merging the two sets of data for this question
+library(ggplot2)
 if(!exists("NEI")){NEI <- readRDS("./summarySCC_PM25.txt")}
 if(!exists("SCC")){SCC <- readRDS("./exdata_data_NEI_data/Source_Classification_Code.rds")}
 if(!exists("NEISCC")){NEISCC <- merge(NEI, SCC, by="SCC")}
-library(ggplot2)
+
 
 #Assigning information to variables to create plots later on 
 coal <- grepl("coal", NEISCC$Short.Name, ignore.case=TRUE)
