@@ -4,9 +4,10 @@ have seen decreases in emissions from 1999–2008 for Baltimore City? Which have
 Use the ggplot2 plotting system to make a plot answer this question.
 
 ## Loading in files to assign information needed as well as the ggplot2 library
+library(ggplot2)
 if(!exists("NEI")){NEI <- readRDS("./summarySCC_PM25.txt")}
 if(!exists("SCC")){SCC <- readRDS("./exdata_data_NEI_data/Source_Classification_Code.rds")}
-library(ggplot2)
+
 
 ##Creating a subset and a variable to be later plotted
 subsetNEI <- NEI[NEI$fips=="24510", ]
