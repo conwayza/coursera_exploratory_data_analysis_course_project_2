@@ -16,6 +16,6 @@ aggregatedTotal <- aggregate(Emissions ~ year, subsetNEISCC, sum)
 #Plotting the fourth plot
 png("plot4.png", width=640, height=480)
 gPlot <- ggplot(aggregatedTotal, aes(factor(year), Emissions))
-gplot <- gPlot + geom_bar(stat="identity") + xlab("Year") + ylab(expression('Total PM'[2.5]*" Emissions")) + ggtitle('Total Emissions from coal sources from 1999 to 2008')
+gPlot <- gPlot + geom_bar(stat="identity") + xlab("Year") + ylab(expression('Total PM'[2.5]*" Emissions")) + ggtitle('Total Emissions from coal sources from 1999 to 2008')
 print(gPlot)
 dev.off()
