@@ -5,7 +5,6 @@ Across the United States, how have emissions from coal combustion-related source
 if(!exists("NEI")){NEI <- readRDS("./summarySCC_PM25.txt")}
 if(!exists("SCC")){SCC <- readRDS("./exdata_data_NEI_data/Source_Classification_Code.rds")}
 if(!exists("NEISCC")){NEISCC <- merge(NEI, SCC, by="SCC")}
-
 library(ggplot2)
 
 #Assigning information to variables to create plots later on 
